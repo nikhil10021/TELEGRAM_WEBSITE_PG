@@ -1,0 +1,69 @@
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Size variants */
+.join-btn--sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.join-btn--md {
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+.join-btn--lg {
+  padding: 16px 32px;
+  font-size: 17px;
+}
+
+/* Primary variant - gold gradient */
+.join-btn--primary {
+  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  color: #0d0f14;
+  box-shadow: 0 4px 16px rgba(251, 191, 36, 0.3);
+}
+
+.join-btn--primary:hover {
+  box-shadow: 0 6px 24px rgba(251, 191, 36, 0.4);
+}
+
+/* Secondary variant - dark with amber border */
+.join-btn--secondary {
+  background: var(--bg-card);
+  color: var(--amber);
+  border: 1px solid var(--border-glow);
+}
+
+.join-btn--secondary:hover {
+  border-color: var(--amber);
+  box-shadow: var(--shadow-amber);
+}
+
+.join-btn__icon {
+  font-size: 1.1em;
+}
+
+.join-btn__arrow {
+  font-size: 1.2em;
+  opacity: 0.8;
+  transition: opacity var(--transition);
+}
+
+.join-btn:hover .join-btn__arrow {
+  opacity: 1;
+}

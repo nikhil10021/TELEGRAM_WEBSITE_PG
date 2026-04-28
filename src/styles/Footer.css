@@ -1,0 +1,65 @@
+.footer {
+  padding: 48px 24px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.footer__container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer__logo {
+  font-size: 28px;
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--amber);
+}
+
+.footer__disclaimer {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+
+.footer__link:hover {
+  color: var(--amber);
+}
+
+.footer__divider {
+  color: var(--text-muted);
+}
+
+.footer__copyright {
+  font-size: 13px;
+  color: var(--text-muted);
+}

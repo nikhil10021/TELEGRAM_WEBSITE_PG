@@ -1,0 +1,111 @@
+.deal-gallery {
+  padding: 80px 24px;
+  background: var(--bg-card);
+}
+
+.deal-gallery__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.deal-gallery__title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.deal-gallery__subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.deal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.deal-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 4 / 3;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.deal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.deal-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.deal-card:hover .deal-card__image {
+  transform: scale(1.04);
+}
+
+.deal-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 16px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+}
+
+.deal-card__label {
+  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  color: #0d0f14;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+.deal-gallery__footer {
+  text-align: center;
+}
+
+.deal-gallery__members {
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.deal-gallery__links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .deal-gallery {
+    padding: 60px 20px;
+  }
+
+  .deal-gallery__title {
+    font-size: 28px;
+  }
+
+  .deal-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto 40px;
+  }
+}
