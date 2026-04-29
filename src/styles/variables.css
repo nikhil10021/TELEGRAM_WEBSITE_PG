@@ -1,36 +1,16 @@
 :root {
-  /* Colors */
-  --bg:           #0d0f14;
-  --bg-card:      #141720;
-  --bg-card-2:    #1a1e2a;
-  --border:       rgba(255, 255, 255, 0.08);
-  --border-glow:  rgba(251, 191, 36, 0.3);
-
-  --amber:        #fbbf24;
-  --amber-dark:   #d97706;
-  --amber-light:  #fde68a;
-  --green:        #22c55e;
-  --blue:         #3b82f6;
-
-  --text-primary:   #f0f2f5;
-  --text-secondary: #9ca3af;
-  --text-muted:     #6b7280;
-
-  /* Spacing */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-
-  /* Typography */
-  --font-display: 'Sora', 'Segoe UI', sans-serif;
-  --font-body:    'Inter', 'Segoe UI', sans-serif;
-
-  /* Shadows */
-  --shadow-amber: 0 0 40px rgba(251, 191, 36, 0.12);
-  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.4);
-
-  --transition: 0.2s ease;
+  /* Colors - Light Theme */
+  --primary: #e53935;
+  --primary-dark: #b71c1c;
+  --accent: #fdd835;
+  --accent-dark: #f9a825;
+  --bg: #f5f5f5;
+  --white: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-muted: #555555;
+  --border: #e0e0e0;
+  --green: #2e7d32;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 *, *::before, *::after {
@@ -43,8 +23,8 @@ html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
-  color: var(--text-primary);
-  font-family: var(--font-body);
+  color: var(--text-dark);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

@@ -1,0 +1,40 @@
+.floating-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: #e53935;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 15px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(229, 57, 53, 0.6);
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(229, 57, 53, 0.7);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}

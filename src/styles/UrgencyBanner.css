@@ -1,0 +1,35 @@
+.urgency-banner {
+  position: sticky;
+  top: 68px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 40px;
+  background: #fdd835;
+  color: #1a1a1a;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.urgency-banner__icon {
+  font-size: 0.75rem;
+}
+
+.urgency-banner__countdown {
+  color: #e53935;
+  font-weight: 900;
+}
+
+.urgency-banner__text {
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 640px) {
+  .urgency-banner {
+    font-size: 13px;
+    gap: 0.5rem;
+    padding: 0 10px;
+  }
+}

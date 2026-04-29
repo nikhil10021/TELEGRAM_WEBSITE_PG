@@ -1,0 +1,44 @@
+.big-join-section {
+  padding: 2rem 1rem;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-join-btn {
+  background: linear-gradient(135deg, #e53935, #b71c1c);
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 20px 60px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(229, 57, 53, 0.5);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.big-join-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 35px rgba(229, 57, 53, 0.7);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 6px 25px rgba(229, 57, 53, 0.5);
+  }
+  50% {
+    box-shadow: 0 6px 40px rgba(229, 57, 53, 0.8);
+  }
+}
+
+@media (max-width: 640px) {
+  .big-join-btn {
+    font-size: 18px;
+    padding: 16px 40px;
+    width: 100%;
+    max-width: 320px;
+  }
+}

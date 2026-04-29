@@ -1,4 +1,4 @@
-import { CHANNEL_LINKS, SITE_CONFIG } from '../data/siteData';
+import { CHANNEL_LINKS, SITE_CONFIG, siteConfig } from '../data/siteData';
 import CountdownTimer from './CountdownTimer';
 import JoinButton from './JoinButton';
 import SocialNotification from './SocialNotification';
@@ -6,6 +6,10 @@ import StatsSection from './StatsSection';
 import '../styles/Hero.css';
 
 export default function HeroSection() {
+  const handleJoinClick = () => {
+    window.open(siteConfig.telegramLink, "_blank");
+  };
+
   return (
     <section className="hero">
       <div className="hero__blob"></div>
@@ -39,6 +43,7 @@ export default function HeroSection() {
                 variant={link.variant}
                 icon={link.icon}
                 size="md"
+                onClick={handleJoinClick}
               />
             ))}
           </div>

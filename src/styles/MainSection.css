@@ -1,0 +1,344 @@
+.main-section {
+  padding: 2rem 1rem;
+  background: #f5f5f5;
+}
+
+.main-section__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* LEFT COLUMN - Deal Showcase */
+.main-section__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.deal-showcase {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.deal-showcase__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.deal-showcase__emoji {
+  font-size: 48px;
+}
+
+.deal-showcase__badge {
+  background: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.deal-showcase__badge::before {
+  content: "●";
+  font-size: 8px;
+}
+
+.deal-showcase__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.deal-showcase__details {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
+.deal-showcase__price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.deal-showcase__amount {
+  font-size: 28px;
+  font-weight: 900;
+  color: #e53935;
+}
+
+.deal-showcase__offers {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.deal-showcase__steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.deal-showcase__steps::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #e0e0e0;
+  z-index: 0;
+}
+
+.deal-showcase__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #9e9e9e;
+  position: relative;
+  z-index: 1;
+}
+
+.deal-showcase__step--active {
+  color: #4caf50;
+}
+
+.deal-showcase__step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.deal-showcase__step--active .deal-showcase__step-icon {
+  background: #4caf50;
+  color: white;
+}
+
+/* Price Comparison */
+.price-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.price-comparison__item {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.price-comparison__item--regular {
+  border-color: #ffcdd2;
+}
+
+.price-comparison__item--loot {
+  border-color: #c8e6c9;
+  background: #f1f8e9;
+}
+
+.price-comparison__label {
+  display: block;
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 0.5rem;
+}
+
+.price-comparison__value {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.price-comparison__item--regular .price-comparison__value {
+  color: #555555;
+  text-decoration: line-through;
+}
+
+.price-comparison__item--loot .price-comparison__value {
+  color: #2e7d32;
+}
+
+/* CTA Text */
+.main-section__cta-text {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #e53935;
+  padding: 1rem;
+  background: #ffebee;
+  border-radius: 8px;
+}
+
+/* RIGHT COLUMN - Sidebar */
+.main-section__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.subscribe-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #e53935, #b71c1c);
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.stats-bar__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stats-bar__icon {
+  font-size: 20px;
+}
+
+.stats-bar__value {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.stats-bar__label {
+  font-size: 11px;
+  color: #555555;
+}
+
+/* Next Loot Card */
+.next-loot-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.next-loot-card__title {
+  color: #e53935;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.next-loot-card__time {
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.next-loot-card__btn {
+  width: 100%;
+  padding: 10px;
+  background: #fdd835;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-loot-card__btn:hover {
+  background: #f9a825;
+}
+
+/* Hindi Text */
+.main-section__hindi-text {
+  font-size: 14px;
+  color: #1565c0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.highlight-red {
+  color: #e53935;
+  font-weight: 700;
+}
+
+.main-section__final-text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-section__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-section__right {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .deal-showcase__title {
+    font-size: 16px;
+  }
+  
+  .deal-showcase__amount {
+    font-size: 24px;
+  }
+  
+  .subscribe-btn {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
