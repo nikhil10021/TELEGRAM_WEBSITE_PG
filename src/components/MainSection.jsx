@@ -1,6 +1,24 @@
 import { FEATURED_DEAL, STATS, siteConfig, openTelegram } from '../data/siteData';
 import '../styles/MainSection.css';
 
+const getNextDealTime = () => {
+  const now = new Date();
+  const currentHour = now.getHours();
+  const currentMinutes = now.getMinutes();
+  
+  // Add 1 hour, if minutes > 0 add another hour (round up)
+  let targetHour = currentMinutes > 0 ? currentHour + 2 : currentHour + 1;
+  
+  // Keep within 24 hours
+  targetHour = targetHour % 24;
+  
+  // Format to 12-hour
+  const period = targetHour >= 12 ? 'PM' : 'AM';
+  const hour12 = targetHour % 12 === 0 ? 12 : targetHour % 12;
+  
+  return `${hour12}:00 ${period}`;
+};
+
 export default function MainSection() {
   return (
     <section className="main-section">
@@ -70,21 +88,11 @@ export default function MainSection() {
           
           <div className="next-loot-card">
             <h4 className="next-loot-card__title">🔔 NEXT BIG LOOT</h4>
-            <p className="next-loot-card__time">Dropping {siteConfig.nextDealTime}</p>
+            <p className="next-loot-card__time">Dropping Today at {getNextDealTime()}</p>
             <button className="next-loot-card__btn" onClick={openTelegram}>
               Join Telegram to Reveal Deal
             </button>
           </div>
-          
-          <p className="main-section__hindi-text">
-            Aaise heavy discounted loots paane k liye jaldi se{' '}
-            <span className="highlight-red">Join Button</span> ya{' '}
-            <span className="highlight-red">Subscribe Button</span> pe click karke ye Telegram Channel Join Karlo.
-          </p>
-          
-          <p className="main-section__final-text">
-            Click Join button below to Join Telegram Channel Now 🔔🔔
-          </p>
         </div>
       </div>
     </section>

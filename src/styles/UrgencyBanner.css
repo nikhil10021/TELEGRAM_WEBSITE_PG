@@ -1,35 +1,42 @@
 .urgency-banner {
+  background: #fdd835;
+  padding: 10px 16px;
+  text-align: center;
+  width: 100%;
   position: sticky;
-  top: 68px;
+  top: 0;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  height: 40px;
-  background: #fdd835;
-  color: #1a1a1a;
-  font-weight: 800;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.urgency-label {
+  background: #e53935;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.urgency-countdown {
+  color: #e53935;
+  font-weight: 900;
   font-size: 15px;
 }
 
-.urgency-banner__icon {
-  font-size: 0.75rem;
-}
-
-.urgency-banner__countdown {
-  color: #e53935;
-  font-weight: 900;
-}
-
-.urgency-banner__text {
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .urgency-banner {
-    font-size: 13px;
-    gap: 0.5rem;
-    padding: 0 10px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 12px;
+  }
+  
+  .urgency-label {
+    font-size: 12px;
   }
 }

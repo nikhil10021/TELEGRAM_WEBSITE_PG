@@ -33,28 +33,40 @@
   margin-top: 4px;
 }
 
-.footer__actions {
+.footer-buttons {
   display: flex;
+  gap: 16px;
   justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin: 20px 0;
 }
 
-.footer__btn {
-  padding: 0.75rem 1.5rem;
-  background: #e53935;
-  color: white;
+.footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
   border: none;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.footer__btn:hover {
-  background: #b71c1c;
+.footer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.telegram-btn {
+  background: #0088cc;
+  color: white;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
 }
 
 .footer__copyright {
@@ -62,15 +74,16 @@
   color: #9e9e9e;
 }
 
-@media (max-width: 640px) {
-  .footer__actions {
+@media (max-width: 480px) {
+  .footer-buttons {
     flex-direction: column;
     align-items: center;
   }
   
-  .footer__btn {
+  .footer-btn {
     width: 100%;
     max-width: 280px;
+    justify-content: center;
   }
 }
   line-height: 1.7;

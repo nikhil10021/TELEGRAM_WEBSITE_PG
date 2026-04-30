@@ -21,10 +21,8 @@ export default function UrgencyBanner() {
 
   return (
     <div className="urgency-banner">
-      <span className="urgency-banner__icon">🔴</span>
-      <span className="urgency-banner__text">
-        Secret Invitation Link Expires in: <span className="urgency-banner__countdown">{formatTime(timeLeft)}</span>
-      </span>
+      <span className="urgency-label">🔴 Secret Invitation Link Expires in:</span>
+      <span className="urgency-countdown">{formatTime(timeLeft)}</span>
     </div>
   );
 }
