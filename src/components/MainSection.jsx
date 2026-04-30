@@ -72,6 +72,9 @@ export default function MainSection() {
         
         {/* RIGHT COLUMN - Sidebar CTA */}
         <div className="main-section__right">
+          <div className="welcome-banner-box">
+            🎉 Welcome to the Loot Deal Channel — 90% Discount Offer! 🎉 
+          </div>
           <button className="subscribe-btn" onClick={openTelegram}>
             Subscribe Now
           </button>
